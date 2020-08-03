@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Expander.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Expander IsExpanded="True">
+            <Expander.Header>
+                <Label Text="Expand/collapse me!" />
+            </Expander.Header>
+            <CarouselView ItemsSource="{Binding Items}">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image
+                            Aspect="AspectFit"
+                            HeightRequest="200"
+                            IsOpaque="True"
+                            Source="{Binding ImageSource}" />
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </Expander>
+    </StackLayout>
+
+</ContentPage>
